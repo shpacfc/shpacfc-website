@@ -1,1 +1,51 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+body{
+    font-family:'Poppins',sans-serif;
+    background:#111;
+    color:#fff;
+    line-height:1.6;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(8px);
+    z-index:999;
+}
+
+.logo img{
+    height:70px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#e30613;
+}
+
+.hero{
+    height:100vh;
+    background:url("../images/hero-banner.jpg") center center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position
