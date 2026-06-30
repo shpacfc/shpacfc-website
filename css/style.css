@@ -1,27 +1,40 @@
+/* ==========================
+   SH PAC FC WEBSITE
+   ========================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:'Poppins',sans-serif;
-    background:#111;
-    color:#000;
+    background:#ffffff;
+    color:#222;
     line-height:1.6;
 }
 
+/* ==========================
+   HEADER
+   ========================== */
+
 header{
     position:fixed;
-    width:100%;
     top:0;
     left:0;
+    width:100%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 8%;
-    background:rgba(0,0,0,.75);
-    backdrop-filter:blur(8px);
+    padding:18px 8%;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px);
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
     z-index:999;
 }
 
@@ -30,37 +43,200 @@ header{
 }
 
 nav a{
-    color:white;
     text-decoration:none;
-    margin-left:25px;
+    color:#111;
+    margin-left:28px;
     font-weight:600;
     transition:.3s;
 }
 
 nav a:hover{
-    color:#e30613;
+    color:#d40000;
 }
+
+/* ==========================
+   HERO
+   ========================== */
 
 .hero{
     height:100vh;
     background:url("../images/hero-banner.jpg") center center/cover no-repeat;
     display:flex;
-    justify-content:center;
     align-items:center;
-    text-align:center;
-    position
-    .button{
+    padding:0 8%;
+}
+
+.overlay{
+    background:rgba(0,0,0,.68);
+    padding:55px;
+    border-radius:18px;
+    max-width:600px;
+}
+
+.overlay h1{
+    color:#fff;
+    font-size:58px;
+    line-height:1.05;
+    margin-bottom:20px;
+    font-weight:800;
+}
+
+.overlay p{
+    color:#fff;
+    font-size:20px;
+    margin-bottom:35px;
+}
+
+/* ==========================
+   BUTTON
+   ========================== */
+
+.button{
     display:inline-block;
-    margin-top:30px;
-    padding:16px 35px;
-    background:#000;
+    background:#d40000;
     color:#fff;
     text-decoration:none;
+    padding:18px 40px;
     border-radius:8px;
+    font-size:18px;
     font-weight:700;
     transition:.3s;
 }
 
 .button:hover{
-    background:#d40000;
+    background:#000;
+    transform:translateY(-2px);
+}
+
+/* ==========================
+   SECTIONS
+   ========================== */
+
+section{
+    padding:90px 8%;
+}
+
+section h2{
+    font-size:38px;
+    margin-bottom:20px;
+    color:#111;
+}
+
+section p{
+    font-size:18px;
+    color:#555;
+}
+
+/* ==========================
+   CARDS
+   ========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    margin-top:20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:12px;
+    padding:30px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card h3{
+    color:#d40000;
+    margin-bottom:15px;
+}
+
+/* ==========================
+   VENUE
+   ========================== */
+
+.venue{
+    background:#f5f5f5;
+    text-align:center;
+}
+
+.venue p{
+    font-size:20px;
+    font-weight:500;
+}
+
+/* ==========================
+   CONTACT
+   ========================== */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin-top:12px;
+    font-size:20px;
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* ==========================
+   MOBILE
+   ========================== */
+
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+    padding:15px;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    margin:0 10px;
+    font-size:15px;
+}
+
+.hero{
+    justify-content:center;
+    text-align:center;
+    padding:0 20px;
+}
+
+.overlay{
+    padding:30px;
+}
+
+.overlay h1{
+    font-size:38px;
+}
+
+.overlay p{
+    font-size:18px;
+}
+
+.logo img{
+    height:60px;
+}
+
+section h2{
+    font-size:30px;
+}
+
 }
