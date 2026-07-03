@@ -1,6 +1,6 @@
-/* ==========================
-   SH PAC FC WEBSITE
-   ========================== */
+/* ===============================
+   SH PAC FOOTBALL CLUB
+   =============================== */
 
 *{
     margin:0;
@@ -13,230 +13,331 @@ html{
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:#ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
     color:#222;
     line-height:1.6;
 }
 
-/* ==========================
-   HEADER
-   ========================== */
+/* ===============================
+   Navigation
+   =============================== */
 
 header{
+    background:#ffffff;
     position:fixed;
+    width:100%;
     top:0;
     left:0;
-    width:100%;
+    z-index:999;
+    box-shadow:0 2px 12px rgba(0,0,0,.1);
+}
+
+nav{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 8%;
-    background:rgba(255,255,255,.92);
-    backdrop-filter:blur(10px);
-    box-shadow:0 2px 12px rgba(0,0,0,.08);
-    z-index:999;
+    padding:18px 0;
 }
 
 .logo img{
     height:70px;
 }
 
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
 nav a{
     text-decoration:none;
     color:#111;
-    margin-left:28px;
-    font-weight:600;
+    font-weight:bold;
     transition:.3s;
 }
 
 nav a:hover{
-    color:#d40000;
+    color:#d91f26;
 }
 
-/* ==========================
-   HERO
-   ========================== */
+/* ===============================
+   Hero
+   =============================== */
 
 .hero{
-    height:100vh;
-    background:url("../images/hero-banner.jpg") center center/cover no-repeat;
+    min-height:100vh;
+    background:linear-gradient(rgba(0,0,0,.72),
+    rgba(0,0,0,.72)),
+    url("../images/hero.jpg") center center/cover;
     display:flex;
+    justify-content:center;
     align-items:center;
-    padding:0 8%;
+    text-align:center;
+    color:white;
+    padding:120px 20px 80px;
 }
 
-.overlay{
-    background:rgba(0,0,0,.68);
-    padding:55px;
-    border-radius:18px;
-    max-width:600px;
+.hero-content{
+    max-width:900px;
 }
 
-.overlay h1{
-    color:#fff;
-    font-size:58px;
-    line-height:1.05;
+.hero-logo{
+    width:180px;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:68px;
     margin-bottom:20px;
-    font-weight:800;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
 }
 
-.overlay p{
-    color:#fff;
-    font-size:20px;
+.hero p{
+    font-size:26px;
     margin-bottom:35px;
+    color:#f0f0f0;
 }
 
-/* ==========================
-   BUTTON
-   ========================== */
-
-.button{
+.hero-button{
     display:inline-block;
-    background:#d40000;
-    color:#fff;
+    background:#d91f26;
+    color:white;
+    padding:18px 45px;
+    border-radius:50px;
     text-decoration:none;
-    padding:18px 40px;
-    border-radius:8px;
-    font-size:18px;
-    font-weight:700;
+    font-size:20px;
+    font-weight:bold;
     transition:.3s;
 }
 
-.button:hover{
+.hero-button:hover{
     background:#000;
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 }
 
-/* ==========================
-   SECTIONS
-   ========================== */
+/* ===============================
+   Sections
+   =============================== */
 
 section{
-    padding:90px 8%;
+    padding:90px 10%;
 }
 
-section h2{
-    font-size:38px;
+.section-title{
+    text-align:center;
+    font-size:42px;
     margin-bottom:20px;
     color:#111;
 }
 
-section p{
+.section-text{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    color:#666;
     font-size:18px;
-    color:#555;
 }
 
-/* ==========================
-   CARDS
-   ========================== */
+/* ===============================
+   Features
+   =============================== */
 
-.cards{
+.features{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:25px;
-    margin-top:20px;
+    gap:30px;
+    margin-top:60px;
 }
 
 .card{
-    background:#fff;
-    border-radius:12px;
-    padding:30px;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    background:white;
+    padding:40px 30px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
     transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-6px);
+    transform:translateY(-10px);
 }
 
 .card h3{
-    color:#d40000;
     margin-bottom:15px;
+    color:#d91f26;
+    font-size:24px;
 }
 
-/* ==========================
-   VENUE
-   ========================== */
-
-.venue{
-    background:#f5f5f5;
-    text-align:center;
+.card p{
+    color:#555;
 }
 
-.venue p{
-    font-size:20px;
-    font-weight:500;
-}
+/* ===============================
+   Training Section
+   =============================== */
 
-/* ==========================
-   CONTACT
-   ========================== */
-
-.contact{
-    text-align:center;
-}
-
-.contact p{
-    margin-top:12px;
-    font-size:20px;
-}
-
-/* ==========================
-   FOOTER
-   ========================== */
-
-footer{
+.training{
     background:#111;
     color:white;
-    text-align:center;
-    padding:30px;
 }
 
-/* ==========================
-   MOBILE
-   ========================== */
+.training .section-title{
+    color:white;
+}
+
+.training-info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+    margin-top:50px;
+}
+
+.training-box{
+    background:#222;
+    padding:35px;
+    border-radius:15px;
+}
+
+.training-box h3{
+    color:#d91f26;
+    margin-bottom:20px;
+}
+
+.training-box p{
+    margin-bottom:10px;
+}
+
+/* ===============================
+   CTA
+   =============================== */
+
+.cta{
+    background:#d91f26;
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:46px;
+    margin-bottom:20px;
+}
+
+.cta p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.cta a{
+    background:white;
+    color:#111;
+    padding:18px 45px;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.cta a:hover{
+    background:black;
+    color:white;
+}
+
+/* ===============================
+   Footer
+   =============================== */
+
+footer{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+footer img{
+    width:90px;
+    margin-bottom:20px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#d91f26;
+}
+
+/* ===============================
+   Responsive
+   =============================== */
 
 @media(max-width:900px){
 
-header{
-    flex-direction:column;
-    padding:15px;
-}
-
 nav{
-    margin-top:15px;
+    flex-direction:column;
 }
 
-nav a{
-    margin:0 10px;
-    font-size:15px;
+nav ul{
+    margin-top:20px;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
 }
+
+.hero h1{
+    font-size:44px;
+}
+
+.hero p{
+    font-size:22px;
+}
+
+.section-title{
+    font-size:34px;
+}
+
+.cta h2{
+    font-size:34px;
+}
+
+}
+
+@media(max-width:600px){
 
 .hero{
-    justify-content:center;
-    text-align:center;
-    padding:0 20px;
+    padding-top:180px;
 }
 
-.overlay{
-    padding:30px;
+.hero-logo{
+    width:130px;
 }
 
-.overlay h1{
-    font-size:38px;
+.hero h1{
+    font-size:34px;
 }
 
-.overlay p{
+.hero p{
     font-size:18px;
 }
 
-.logo img{
-    height:60px;
+.hero-button{
+    padding:15px 30px;
+    font-size:18px;
 }
 
-section h2{
-    font-size:30px;
+nav ul{
+    flex-direction:column;
+    gap:12px;
 }
 
 }
