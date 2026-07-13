@@ -152,97 +152,53 @@ nav a.active::after{
 
 }
 
-/* ===========================
- HERO
-=========================== */
+@media (max-width:900px){
 
-.hero{
+.hero-grid{
 
-    margin-top:90px;
-
-    min-height:720px;
-
-    background:url("../images/hero-banner.jpg") center center/cover no-repeat;
-
-    display:flex;
-    align-items:center;
+grid-template-columns:1fr;
 
 }
 
-.hero-overlay{
+.hero-left{
 
-    width:100%;
-
-    background:linear-gradient(
-        90deg,
-        rgba(255,255,255,.95) 0%,
-        rgba(255,255,255,.88) 40%,
-        rgba(255,255,255,0) 75%
-    );
+text-align:center;
 
 }
 
-.hero-content{
+.hero-left h1{
 
-    max-width:560px;
-
-    padding:120px 0;
-
-    margin-left:7%;
+font-size:60px;
 
 }
 
-.hero h1{
+.hero-left h2{
 
-    font-family:'Oswald',sans-serif;
-
-    font-size:82px;
-
-    line-height:.95;
-
-    text-transform:uppercase;
+font-size:32px;
 
 }
 
-.hero h1 span{
+.hero-left p{
 
-    color:#d62828;
+margin:auto;
 
-}
-
-.hero h2{
-
-    margin-top:20px;
-
-    font-family:'Oswald',sans-serif;
-
-    font-size:40px;
-
-    font-style:italic;
-
-    color:#111;
+margin-top:20px;
 
 }
 
-.hero p{
+.hero-buttons{
 
-    margin-top:30px;
+justify-content:center;
 
-    font-size:22px;
-
-    color:#555;
-
-    max-width:460px;
+flex-wrap:wrap;
 
 }
 
-.buttons{
+.hero-right{
 
-    margin-top:40px;
+margin-top:40px;
 
-    display:flex;
-
-    gap:20px;
+}
 
 }
 
